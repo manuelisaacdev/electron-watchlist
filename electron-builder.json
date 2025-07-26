@@ -1,0 +1,10 @@
+{
+    "productName": "WatchList",
+    "appId": "com.manuelisaac.watchlist",
+    "extraResources": ["dist-electron/preload.cjs"],
+    "files": ["dist-electron", "dist-react"],
+    "icon": "./desktopIcon.png",
+    "win": {
+        "target": ["portable"]
+    }
+}

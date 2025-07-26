@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = [
+        {
+            "nome": "Ana Maria",
+            "genero": "FEMININO",
+            "dataNascimento": "2001-04-06",
+            "email": "anamaria@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Rita Mulato",
+            "genero": "FEMININO",
+            "dataNascimento": "2002-08-12",
+            "email": "ritamulato@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Margarida Amaro",
+            "genero": "FEMININO",
+            "dataNascimento": "1999-03-27",
+            "email": "margaridaamaro@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Venacio Chicala",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-10-14",
+            "email": "venaciochicala@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Adelina Miguel",
+            "genero": "FEMININO",
+            "dataNascimento": "1990-04-21",
+            "email": "adelinamiguel@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Adelino Miguel",
+            "genero": "MASCULINO",
+            "dataNascimento": "1984-06-01",
+            "email": "adelinomiguel@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ator Godino",
+            "genero": "MASCULINO",
+            "dataNascimento": "2001-01-23",
+            "email": "atorgodinho@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cacoma Chissola",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-06-26",
+            "email": "cacomachissola@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Estefânia da Silva",
+            "genero": "FEMININO",
+            "dataNascimento": "1987-05-27",
+            "email": "estefaniasilva@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Fernando Castro",
+            "genero": "MASCULINO",
+            "dataNascimento": "1991-11-20",
+            "email": "fernandocastro@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Filipe António",
+            "genero": "MASCULINO",
+            "dataNascimento": "1990-09-04",
+            "email": "filipeantonio@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Garcia",
+            "genero": "MASCULINO",
+            "dataNascimento": "1986-02-16",
+            "email": "garcia@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Geovana Viera",
+            "genero": "FEMININO",
+            "dataNascimento": "2001-11-17",
+            "email": "geovanaviera@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Gideão Chissola",
+            "genero": "MASCULINO",
+            "dataNascimento": "1980-08-05",
+            "email": "gideaochissola@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "João Sardinha",
+            "genero": "MASCULINO",
+            "dataNascimento": "1997-06-15",
+            "email": "joaosardinha@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jorge Costa",
+            "genero": "MASCULINO",
+            "dataNascimento": "1986-04-03",
+            "email": "jorgecosta@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "José Pedro Hebo",
+            "genero": "MASCULINO",
+            "dataNascimento": "2001-11-08",
+            "email": "josepedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "José Wamana",
+            "genero": "MASCULINO",
+            "dataNascimento": "1994-01-08",
+            "email": "josewamana@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Teresa Augusto",
+            "genero": "FEMININO",
+            "dataNascimento": "1983-10-06",
+            "email": "teresaaugusto@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sara Tuma",
+            "genero": "FEMININO",
+            "dataNascimento": "2001-10-07",
+            "email": "saratuma@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cesar (DELOITTE)",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-05-17",
+            "email": "cesardeloitte@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Dalva (DELOITTE)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1996-09-12",
+            "email": "dalvadeloitte@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "José (DELOITTE)",
+            "genero": "MASCULINO",
+            "dataNascimento": "2002-11-23",
+            "email": "josedeloitte@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ismael Correia",
+            "genero": "MASCULINO",
+            "dataNascimento": "1996-03-18",
+            "email": "ismaelcorreia@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Octair Bernardino",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-08-25",
+            "email": "octairbernardino@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Diana Pedro Hebo",
+            "genero": "FEMININO",
+            "dataNascimento": "1996-10-20",
+            "email": "dianapedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Marlene Pedro Hebo",
+            "genero": "FEMININO",
+            "dataNascimento": "1983-04-14",
+            "email": "marlenepedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Biatriz Pedro Hebo",
+            "genero": "FEMININO",
+            "dataNascimento": "1988-06-12",
+            "email": "biatrizpedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Adelaide Abrão Upale Alberto",
+            "genero": "FEMININO",
+            "dataNascimento": "1982-05-26",
+            "email": "adelaideabraoupalealberto@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Mikana Upale Alberto",
+            "genero": "FEMININO",
+            "dataNascimento": "1997-08-25",
+            "email": "mikanaupalealberto@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Isaias Miguel",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-06-26",
+            "email": "isaiasmiguel@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Neves Tchiuka",
+            "genero": "MASCULINO",
+            "dataNascimento": "1987-01-11",
+            "email": "nevestchiuka@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Domingos Wassamba Samilonga",
+            "genero": "MASCULINO",
+            "dataNascimento": "1992-03-18",
+            "email": "domingoswassambasamilonga@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Obede Pedro Hebo",
+            "genero": "MASCULINO",
+            "dataNascimento": "1994-08-26",
+            "email": "obedepedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Francisco Afonso",
+            "genero": "MASCULINO",
+            "dataNascimento": "1985-07-07",
+            "email": "franciscoafonso@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Márcio Manuel Morais",
+            "genero": "MASCULINO",
+            "dataNascimento": "1990-10-27",
+            "email": "marciomanuelmorais@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jóse António",
+            "genero": "MASCULINO",
+            "dataNascimento": "1998-01-03",
+            "email": "joseantonio@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Josimar Manuel Magalhaês",
+            "genero": "MASCULINO",
+            "dataNascimento": "1993-04-08",
+            "email": "josimarmanuel@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Piter Pina Mendez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1998-10-25",
+            "email": "piterpinamendez@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Rosa Mecheque",
+            "genero": "FEMININO",
+            "dataNascimento": "1991-01-22",
+            "email": "rosamecheque@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Paulina António",
+            "genero": "FEMININO",
+            "dataNascimento": "1988-02-26",
+            "email": "paulinaantonio@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Isabel Conseição",
+            "genero": "FEMININO",
+            "dataNascimento": "1990-11-10",
+            "email": "isabelconseicao@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Lindafrica Pereira",
+            "genero": "FEMININO",
+            "dataNascimento": "1996-01-13",
+            "email": "lindafricapereira@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Netolas",
+            "genero": "MASCULINO",
+            "dataNascimento": "1990-03-13",
+            "email": "netolas@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sérgio Mussopa",
+            "genero": "MASCULINO",
+            "dataNascimento": "1986-07-03",
+            "email": "sergiomussopa@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sérgio Cassoca",
+            "genero": "MASCULINO",
+            "dataNascimento": "2001-05-12",
+            "email": "sergiocassoca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Esperança Davoca",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-11-14",
+            "email": "esperancadavoca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Rafa Chissoola",
+            "genero": "MASCULINO",
+            "dataNascimento": "1980-10-19",
+            "email": "rafachissoola@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Raimundo Rai-G",
+            "genero": "MASCULINO",
+            "dataNascimento": "1987-11-01",
+            "email": "raimundo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Santiago Agostinho",
+            "genero": "MASCULINO",
+            "dataNascimento": "1998-05-25",
+            "email": "santiagoagostinho@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Dinho Bernardino",
+            "genero": "MASCULINO",
+            "dataNascimento": "1986-08-27",
+            "email": "bernardino@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Saní Pedro Hebo",
+            "genero": "FEMININO",
+            "dataNascimento": "1998-02-27",
+            "email": "sanipedrohebo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Neusa Fininha",
+            "genero": "FEMININO",
+            "dataNascimento": "2003-08-23",
+            "email": "neusafininha@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Rebeca Abrão Alberto",
+            "genero": "FEMININO",
+            "dataNascimento": "2002-07-24",
+            "email": "rebecaabraoalberto@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Gilberto",
+            "genero": "MASCULINO",
+            "dataNascimento": "1991-04-27",
+            "email": "gilberto@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Marcolino",
+            "genero": "MASCULINO",
+            "dataNascimento": "1991-07-21",
+            "email": "marcolino@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Mbele Tanks",
+            "genero": "MASCULINO",
+            "dataNascimento": "1984-04-06",
+            "email": "mbeletanks@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bernardino (UCAN)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-11-18",
+            "email": "bernardinoucan@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Victor Lituai",
+            "genero": "MASCULINO",
+            "dataNascimento": "1991-06-14",
+            "email": "victorlituai@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Lourenço Tchiyuca",
+            "genero": "MASCULINO",
+            "dataNascimento": "1983-06-22",
+            "email": "lourencotchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Elder",
+            "genero": "MASCULINO",
+            "dataNascimento": "1985-01-25",
+            "email": "elder@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Agostinho",
+            "genero": "MASCULINO",
+            "dataNascimento": "2003-08-20",
+            "email": "agostinho@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Vitó (Tinha Minga)",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-11-04",
+            "email": "vito@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bruno Vick",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-01-13",
+            "email": "brunovick@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Netox Netolas",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-06-12",
+            "email": "netoxnetolas@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Tio Rafa",
+            "genero": "MASCULINO",
+            "dataNascimento": "1991-01-08",
+            "email": "tiorafa@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Guidinha",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-07-15",
+            "email": "guidinha@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Fefa",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-02-27",
+            "email": "fefa@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Nela",
+            "genero": "FEMININO",
+            "dataNascimento": "1988-08-19",
+            "email": "nela@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Rodé",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-02-07",
+            "email": "rode@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Urucutcho",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-07-26",
+            "email": "urucutcho@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Marcelina (Life)",
+            "genero": "FEMININO",
+            "dataNascimento": "2000-05-19",
+            "email": "marcelinalife@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bebucha (Abobse)",
+            "genero": "FEMININO",
+            "dataNascimento": "1985-08-21",
+            "email": "bebuchaabobse@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Horácio Jaione",
+            "genero": "MASCULINO",
+            "dataNascimento": "1993-04-19",
+            "email": "horaciojaione@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jorge (Bojí)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1985-08-13",
+            "email": "jorgeboji@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Evânia Noémia",
+            "genero": "FEMININO",
+            "dataNascimento": "1995-03-07",
+            "email": "evanianoemia@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Eliete Vilinga",
+            "genero": "FEMININO",
+            "dataNascimento": "1981-07-24",
+            "email": "elietevilinga@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cliana Malange",
+            "genero": "FEMININO",
+            "dataNascimento": "1987-04-22",
+            "email": "clianamalange@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cristina",
+            "genero": "FEMININO",
+            "dataNascimento": "1991-09-20",
+            "email": "cristina@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Célcia",
+            "genero": "FEMININO",
+            "dataNascimento": "2003-06-23",
+            "email": "celcia@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Emiliana",
+            "genero": "FEMININO",
+            "dataNascimento": "1993-01-06",
+            "email": "emiliana@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Armelindo",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-11-27",
+            "email": "armelindo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Belger",
+            "genero": "MASCULINO",
+            "dataNascimento": "1984-09-17",
+            "email": "belger@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jesus (UCAN)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1995-11-23",
+            "email": "jesusucan@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Neusa",
+            "genero": "FEMININO",
+            "dataNascimento": "1984-09-24",
+            "email": "neusa@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cebola",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-02-09",
+            "email": "cebola@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Erivelto Clénio",
+            "genero": "MASCULINO",
+            "dataNascimento": "1994-01-09",
+            "email": "eriveltoclenio@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cleidinir Adriano",
+            "genero": "MASCULINO",
+            "dataNascimento": "1990-07-27",
+            "email": "cleidiniradriano@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jonas",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-07-25",
+            "email": "jonas@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bruno (Tidado)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-02-15",
+            "email": "brunotidado@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cabila",
+            "genero": "MASCULINO",
+            "dataNascimento": "1983-01-07",
+            "email": "cabila@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Mucazo",
+            "genero": "MASCULINO",
+            "dataNascimento": "1990-01-27",
+            "email": "mucazo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sérgio Nonó",
+            "genero": "MASCULINO",
+            "dataNascimento": "1981-07-10",
+            "email": "sergionono@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ginga",
+            "genero": "FEMININO",
+            "dataNascimento": "1980-08-27",
+            "email": "ginga@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Elsa",
+            "genero": "FEMININO",
+            "dataNascimento": "1995-10-05",
+            "email": "elsa@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sara",
+            "genero": "FEMININO",
+            "dataNascimento": "1995-10-04",
+            "email": "sara@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Maura Lituai",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-02-27",
+            "email": "mauralituai@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Diolinda Tchiyuca",
+            "genero": "FEMININO",
+            "dataNascimento": "1985-11-07",
+            "email": "diolindatchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sara Tchiyuca",
+            "genero": "FEMININO",
+            "dataNascimento": "2002-02-04",
+            "email": "saratchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Adriana",
+            "genero": "FEMININO",
+            "dataNascimento": "2001-07-07",
+            "email": "adriana@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Belamino (Bairo Muxicano)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-05-12",
+            "email": "belaminomuxicano@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jerónimo (Pipo Choque)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1995-08-12",
+            "email": "jeronimo@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "NGA (Mussende)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1992-11-14",
+            "email": "ngamussende@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Alex Tchiyuca",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-03-27",
+            "email": "alextchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jamba Tchiyuca",
+            "genero": "MASCULINO",
+            "dataNascimento": "1986-05-04",
+            "email": "jambatchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Cristo Tchiyuca",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-11-25",
+            "email": "cristotchiyuca@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Gerônimo (Pito Choque)",
+            "genero": "MASCULINO",
+            "dataNascimento": "1998-01-28",
+            "email": "geronimoputochoque@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sara (Nevez)",
+            "genero": "FEMININO",
+            "dataNascimento": "1990-05-19",
+            "email": "saranevez@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Wisma",
+            "genero": "MASCULINO",
+            "dataNascimento": "1998-05-11",
+            "email": "wisma@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Chica",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-04-23",
+            "email": "chica@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Laura",
+            "genero": "FEMININO",
+            "dataNascimento": "1991-10-10",
+            "email": "laura@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bebucho (Nela)",
+            "genero": "MASCULINO",
+            "dataNascimento": "2000-07-20",
+            "email": "bebuchonela@gmail.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "John Doe",
+            "genero": "MASCULINO",
+            "dataNascimento": "1985-01-01",
+            "email": "johndoe@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jane Smith",
+            "genero": "FEMININO",
+            "dataNascimento": "1990-05-15",
+            "email": "janesmith@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Robert Johnson",
+            "genero": "MASCULINO",
+            "dataNascimento": "1978-11-30",
+            "email": "robertjohnson@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Maria Silva",
+            "genero": "FEMININO",
+            "dataNascimento": "1982-07-20",
+            "email": "mariasilva@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Carlos Gonzalez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1995-03-10",
+            "email": "carlosgonzalez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ana Santos",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-09-25",
+            "email": "anasantos@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "David Lee",
+            "genero": "MASCULINO",
+            "dataNascimento": "1976-06-12",
+            "email": "davidlee@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sophia Wang",
+            "genero": "FEMININO",
+            "dataNascimento": "1993-02-05",
+            "email": "sophiawang@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Luis Hernandez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1980-08-18",
+            "email": "luishernandez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Isabella Lopez",
+            "genero": "FEMININO",
+            "dataNascimento": "1987-04-02",
+            "email": "isabellalopez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Mohamed Ali",
+            "genero": "MASCULINO",
+            "dataNascimento": "1992-12-27",
+            "email": "mohamedali@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Olivia Dubois",
+            "genero": "FEMININO",
+            "dataNascimento": "1984-10-11",
+            "email": "oliviadubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sebastian Mueller",
+            "genero": "MASCULINO",
+            "dataNascimento": "1997-06-24",
+            "email": "sebastianmueller@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Camila Costa",
+            "genero": "FEMININO",
+            "dataNascimento": "1991-03-09",
+            "email": "camilacosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Daniel Kim",
+            "genero": "MASCULINO",
+            "dataNascimento": "1979-09-22",
+            "email": "danielkim@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Emily Tremblay",
+            "genero": "FEMININO",
+            "dataNascimento": "1983-05-07",
+            "email": "emilytremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Javier Rodriguez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1996-01-20",
+            "email": "javierrodriguez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sofia Costa",
+            "genero": "FEMININO",
+            "dataNascimento": "1988-07-04",
+            "email": "sofiacosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Michael Smith",
+            "genero": "MASCULINO",
+            "dataNascimento": "1981-02-17",
+            "email": "michaelsmith@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Emma Dubois",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-10-01",
+            "email": "emmadubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Thomas Mueller",
+            "genero": "MASCULINO",
+            "dataNascimento": "1994-04-14",
+            "email": "thomasmueller@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sophie Tremblay",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-12-28",
+            "email": "sophietremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Gabriel Lopez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1983-08-11",
+            "email": "gabriellopez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ava Wang",
+            "genero": "FEMININO",
+            "dataNascimento": "1998-03-26",
+            "email": "avawang@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Antonio Hernandez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1992-11-08",
+            "email": "antoniohernandez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Mia Dubois",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-07-23",
+            "email": "miadubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "David Mueller",
+            "genero": "MASCULINO",
+            "dataNascimento": "1980-03-08",
+            "email": "davidmueller@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Chloe Costa",
+            "genero": "FEMININO",
+            "dataNascimento": "1995-09-21",
+            "email": "chloecosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Jose Kim",
+            "genero": "MASCULINO",
+            "dataNascimento": "1989-05-06",
+            "email": "josekim@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Lily Tremblay",
+            "genero": "FEMININO",
+            "dataNascimento": "1983-12-20",
+            "email": "lilytremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Carlos Rodriguez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1997-08-04",
+            "email": "carlosrodriguez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Zoe Costa",
+            "genero": "FEMININO",
+            "dataNascimento": "1991-02-17",
+            "email": "zoecosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Matthew Smith",
+            "genero": "MASCULINO",
+            "dataNascimento": "1985-10-02",
+            "email": "matthewsmith@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Grace Dubois",
+            "genero": "FEMININO",
+            "dataNascimento": "1990-04-15",
+            "email": "gracedubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Ethan Mueller",
+            "genero": "MASCULINO",
+            "dataNascimento": "1978-12-29",
+            "email": "ethanmueller@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Hannah Tremblay",
+            "genero": "FEMININO",
+            "dataNascimento": "1982-08-12",
+            "email": "hannahtremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Juan Lopez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1996-03-27",
+            "email": "juanlopez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Victoria Wang",
+            "genero": "FEMININO",
+            "dataNascimento": "1984-11-10",
+            "email": "victoriawang@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Christopher Hernandez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1988-07-25",
+            "email": "christopherhernandez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Sarah Dubois",
+            "genero": "FEMININO",
+            "dataNascimento": "1982-03-09",
+            "email": "sarahdubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Andrew Costa",
+            "genero": "MASCULINO",
+            "dataNascimento": "1995-09-22",
+            "email": "andrewcosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Natalie Kim",
+            "genero": "FEMININO",
+            "dataNascimento": "1989-05-07",
+            "email": "nataliekim@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Laurent Tremblay",
+            "genero": "MASCULINO",
+            "dataNascimento": "1983-12-21",
+            "email": "laurenttremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Gabriela Rodriguez",
+            "genero": "FEMININO",
+            "dataNascimento": "1998-08-05",
+            "email": "gabrielarodriguez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Samuel Costa",
+            "genero": "MASCULINO",
+            "dataNascimento": "1992-02-18",
+            "email": "samuelcosta@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Avery Smith",
+            "genero": "FEMININO",
+            "dataNascimento": "1986-10-03",
+            "email": "averysmith@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Kevin Dubois",
+            "genero": "MASCULINO",
+            "dataNascimento": "1981-04-16",
+            "email": "kevindubois@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Bella Tremblay",
+            "genero": "FEMININO",
+            "dataNascimento": "1985-12-30",
+            "email": "bellatremblay@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Victor Lopez",
+            "genero": "MASCULINO",
+            "dataNascimento": "1994-08-13",
+            "email": "victorlopez@example.com",
+            "senha": "12345678"
+        },
+        {
+            "nome": "Luna Wang",
+            "genero": "FEMININO",
+            "dataNascimento": "1988-03-28",
+            "email": "lunawang@example.com",
+            "senha": "12345678"
+        }
+    ]
+    
+    function randomInteger(min=0, max=0) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    console.log(users.map(({nome, genero, dataNascimento}) => ({
+        name: nome, 
+        gender: genero === "MASCULINO" ? "MALE" : "FEMALE",
+        dateOfBirth: dataNascimento,
+        phone: Array.from({length: randomInteger(0, 3)}).map(() => ({number: `+244${randomInteger(920_000_000, 957_999_999)}`})),
+    })));
+    </script>
+</body>
+</html>

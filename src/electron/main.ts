@@ -1,10 +1,17 @@
 import path from 'path';
-import "reflect-metadata";
 import { app, BrowserWindow, ipcMain } from 'electron';
 
+import dayjs from 'dayjs';
+import "reflect-metadata";
+import duration from 'dayjs/plugin/duration.js';
+dayjs.extend(duration);
+
 import { getPreloadPath, isDev } from './libs/util.js';
+
 import DatabaseManager from './config/DatabaseManager.js';
 import PersonService from './service/PersonService.js';
+import Anime from './model/Anime.js';
+import AnimeType from './model/AnimeType.js';
 
 
 export default class ElectronApp {
@@ -17,6 +24,18 @@ export default class ElectronApp {
             console.log("Database initialized successfully.");
             this.setupIPC();
             console.log("IPC handlers set up successfully.");
+            // const anime = new Anime();
+            // anime.title = "Teste 1";
+            // anime.animeType = AnimeType.ANIME;
+            // anime.available = true;
+            // anime.sinopse = "1111111111111111111111111111";
+            // anime.maturityRating = 12;
+            // anime.duration = dayjs.duration("PT1H34M45S");
+            // anime.episodes = 12;
+            // anime.rating = 3;
+            // anime.yearRelease = 2021;
+            // const saved = await anime.save()
+            // console.log("==================> SAVED: ", saved);
             // const personService = new PersonService(this.database.getDataSource());
             // const person = new Person();
             // person.name = "John Doe";

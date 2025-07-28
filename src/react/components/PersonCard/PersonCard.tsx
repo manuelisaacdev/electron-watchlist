@@ -1,29 +1,22 @@
 import dayjs from "dayjs";
 
-// import { FiEdit } from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { SiSteelseries } from "react-icons/si";
 import { PiMaskHappyLight } from "react-icons/pi";
 import { TfiVideoClapper } from "react-icons/tfi";
+import { BsGenderAmbiguous } from "react-icons/bs";
+import { IoShareSocialOutline } from "react-icons/io5";
 import { BiCategoryAlt, BiTask } from "react-icons/bi";
 import { MdMoreVert, MdOutlineShare } from "react-icons/md";
 import { LiaBirthdayCakeSolid, LiaNimblr } from "react-icons/lia";
-import { LuCalendarCheck2, LuCalendarSync, LuCheck, LuPhone } from "react-icons/lu";
+import { LuCalendarCheck2, LuCalendarSync, LuCheck, LuTextSelect, LuTrash2 } from "react-icons/lu";
 
 import { cn, formatTimeAgo } from "@/lib/utils";
-import IconButton from "../IconButton/IconButton";
 import type PersonCardProps from "./PersonCardProps";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function PersonCard({person}:PersonCardProps) {
-
     return (
         <div className='flex gap-3 flex-col items-stretch p-3 border flex-shrink-0 border-main bg-white rounded-lg'>
             <div className="flex gap-4 flex-wrap">
@@ -49,73 +42,95 @@ export default function PersonCard({person}:PersonCardProps) {
                 </div>
             </div>
 
-            <div className="w-full flex flex-col">
+            <div className="w-full gap-1 flex flex-col">
                 <div className="w-full flex gap-2 justify-between items-center">
-                    <div className="flex gap-2 items-center">
+                    <div className="flex gap-2 items-center w-full overflow-hidden">
                         <h2 className='text-sm text-neutral-700 font-bold truncate' data-tooltip-id={`person-name-${person.id}`} data-tooltip-content={person.name}>{person.name}</h2>
                         <LuCheck className="text-lg text-teal-400"/>
                         <span className="text-xs text-teal-400 font-normal">Selecionado</span>
                     </div>
-
                     <DropdownMenu>
-                        <DropdownMenuTrigger>
-                            <IconButton component={"div"} className="text-neutral-400 text-base w-6 h-6">
-                                <MdMoreVert />
-                            </IconButton>
+                        <DropdownMenuTrigger className="flex shrink-0 justify-center items-center text-base w-6 h-6 rounded-full text-neutral-400 cursor-pointer hover:bg-black/5">
+                            <MdMoreVert />
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent data-align="">
-                            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                        <DropdownMenuContent>
+                            <DropdownMenuLabel className="flex gap-2 hover:bg-neutral-50">
+                                <LuTextSelect className="text-lg text-neutral-400"/>
+                                <span className="text-sm text-neutral-600">Selecionar</span>
+                            </DropdownMenuLabel>
+
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>Profile</DropdownMenuItem>
-                            <DropdownMenuItem>Billing</DropdownMenuItem>
-                            <DropdownMenuItem>Team</DropdownMenuItem>
-                            <DropdownMenuItem>Subscription</DropdownMenuItem>
+                            
+                            <DropdownMenuItem className="flex gap-2 hover:bg-neutral-50">
+                                <IoShareSocialOutline className="text-lg text-neutral-400"/>
+                                <span className="text-sm text-neutral-600">Mídias Enviadas</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="flex gap-2 hover:bg-neutral-50">
+                                <LuTextSelect className="text-lg text-neutral-400"/>
+                                <span className="text-sm text-neutral-600">Envios Pendentes</span>
+                            </DropdownMenuItem>
+
+                            <DropdownMenuSeparator />
+
+                            <DropdownMenuItem className="flex gap-2 hover:bg-neutral-50">
+                                <FiEdit className="text-lg text-neutral-400"/>
+                                <span className="text-sm text-neutral-600">Editar</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="flex gap-2 hover:bg-red-400/5">
+                                <LuTrash2 className="text-lg text-red-400"/>
+                                <span className="text-sm text-red-400">Excluir</span>
+                            </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </div>
+
                 <div className="text-xs text-sky-500 font-normal p-1.5 bg-sky-400/5 rounded-sm">Há no total de 876 médias enviadas desde 2025 até o momento.</div>
             </div>
 
-            <div className="flex gap-3 items-center">
-                <Tooltip>
-                    <TooltipTrigger>
-                        <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1 rounded-3xl">
-                            <LiaBirthdayCakeSolid className="text-base text-zinc-500" />
-                            <span className="text-xs font-normal text-neutral-500">21</span>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>Idade</TooltipContent>
-                </Tooltip>
+            <div className="flex gap-3 justify-between items-center flex-wrap">
+                <div className="flex gap-3 items-center">
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <LiaBirthdayCakeSolid className="text-base text-zinc-500" />
+                                <span className="text-xs font-normal text-neutral-500 text-nowrap">21</span>
+                            </div>
+                        </TooltipTrigger>
+                        <TooltipContent>Idade</TooltipContent>
+                    </Tooltip>
+
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <BsGenderAmbiguous className="text-base text-zinc-500" />
+                                <span className="text-xs font-normal text-neutral-500 text-nowrap">Masculino</span>
+                            </div>
+                        </TooltipTrigger>
+                        <TooltipContent>Idade</TooltipContent>
+                    </Tooltip>
+                </div>
                 
-                <Tooltip>
-                    <TooltipTrigger>
-                        <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1 rounded-3xl">
-                            <LuCalendarCheck2 className="text-sm text-zinc-500" />
-                            <span className="text-xs font-normal text-neutral-500">{formatTimeAgo(dayjs().subtract(26, "year").toDate())}</span>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>Data de registro</TooltipContent>
-                </Tooltip>
-                
-                <Tooltip>
-                    <TooltipTrigger>
-                        <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1 rounded-3xl">
-                            <LuCalendarSync className="text-sm text-zinc-500" />
-                            <span className="text-xs font-normal text-neutral-500">{formatTimeAgo(dayjs().subtract(26, "year").toDate())}</span>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>Última atualização</TooltipContent>
-                </Tooltip>
-                
-                <Tooltip>
-                    <TooltipTrigger>
-                        <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1 rounded-3xl">
-                            <LuPhone className="text-sm text-zinc-500" />
-                            <span className="text-xs font-normal text-neutral-500">+244 912345678</span>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>Contacto telefónico</TooltipContent>
-                </Tooltip>
+                <div className="flex gap-3 items-center">
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <LuCalendarCheck2 className="text-sm text-zinc-500" />
+                                <span className="text-xs font-normal text-neutral-500 text-nowrap">{formatTimeAgo(dayjs().subtract(26, "year").toDate())}</span>
+                            </div>
+                        </TooltipTrigger>
+                        <TooltipContent>Data de registro</TooltipContent>
+                    </Tooltip>
+                    
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <LuCalendarSync className="text-sm text-zinc-500" />
+                                <span className="text-xs font-normal text-neutral-500 text-nowrap">{formatTimeAgo(dayjs().subtract(26, "year").toDate())}</span>
+                            </div>
+                        </TooltipTrigger>
+                        <TooltipContent>Última atualização</TooltipContent>
+                    </Tooltip>
+                </div>
             </div>
 
             <div className="flex gap-3 justify-between items-center">
@@ -142,9 +157,9 @@ export default function PersonCard({person}:PersonCardProps) {
                 <div className="flex gap-2 items-center">
                     <Tooltip>
                         <TooltipTrigger>
-                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-3 rounded-3xl">
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
                                 <span className="text-xs font-bold text-neutral-500">2115</span>
-                                <MdOutlineShare className="text-md text-zinc-500" />
+                                <MdOutlineShare className="text-base text-zinc-500" />
                             </div>
                         </TooltipTrigger>
                         <TooltipContent>Total de envios.</TooltipContent>
@@ -152,8 +167,8 @@ export default function PersonCard({person}:PersonCardProps) {
 
                     <Tooltip>
                         <TooltipTrigger>
-                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-3 rounded-3xl">
-                                <BiTask className="text-md text-zinc-500" />
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <BiTask className="text-base text-zinc-500" />
                                 <span className="text-xs font-bold text-neutral-600">2</span>
                             </div>
                         </TooltipTrigger>
@@ -164,8 +179,8 @@ export default function PersonCard({person}:PersonCardProps) {
                 <div className="flex gap-2 items-center">
                     <Tooltip>
                         <TooltipTrigger>
-                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-3 rounded-3xl">
-                                <BiCategoryAlt className="text-md text-zinc-500" />
+                            <div className="flex gap-2 items-center border border-zinc-100 h-6 px-1.5 rounded-3xl">
+                                <BiCategoryAlt className="text-base text-zinc-500" />
                                 <span className="text-xs font-bold text-zinc-600">21</span>
                             </div>
                         </TooltipTrigger>

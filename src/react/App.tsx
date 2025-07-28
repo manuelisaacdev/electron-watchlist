@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router";
+
 import MainLayout from "./components/layout/MainLayout";
-import { AnimesPage, DashboardPage, DoramasPage, MoviesPage, PeoplePage, SeriesPage } from "@/pages";
 import { TooltipProvider } from "./components/ui/tooltip";
+import { AnimesPage, DashboardPage, DoramasPage, MoviesPage, PeoplePage, SeriesPage } from "@/pages";
 
 export default function App() {
     return (

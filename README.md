@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+![Dashboard](https://github.com/manuelisaacdev/watch-list/blob/main/design/dashboard.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎬 WatchList
 
-Currently, two official plugins are available:
+WatchList é uma aplicação desenvolvida com Electron + React que auxilia no controle de Filmes, Séries, Animes e Doramas enviados para uma pessoa. Com ela, é possível gerenciar facilmente o que foi compartilhado, garantindo um melhor acompanhamento do conteúdo assistido. 🍿📺
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- 📌 Cadastro de Filmes, Séries, Animes e Doramas
+- 📤 Registro de envios para uma pessoa
+- 🔍 Filtros e buscas por tipo de mídia
+- 🎨 Interface intuitiva e responsiva com JavaFX
+- 📜 Sistema de histórico de compartilhamento
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tecnologias Utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **☄️ Node** (JDK 21+)
+- **♨️ Electron** (JDK 21+)
+- **🎭 React** (para a interface gráfica)
+- **🗄 SQLite** (para armazenamento de dados)
+- **📦 PNPM** (para gestão de dependências)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Como Executar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone este repositório:
+   ```sh
+   git clone https://github.com/manuelisaacdev/electron-watch-list.git watch-list
+   ```
+2. Acesse o diretório do projeto:
+   ```sh
+   cd watch-list
+   ```
+3. Compile e execute a aplicação:
+   ```sh
+   pnpm i
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🤝 Contribuição
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Ficaremos felizes em receber contribuições para melhorar o WatchList! Para contribuir:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Faça um fork do repositório.
+2. Crie uma branch para sua funcionalidade/correção: `git checkout -b minha-feature`.
+3. Faça as modificações e commit: `git commit -m "Descrição da mudança"`.
+4. Envie para o repositório remoto: `git push origin minha-feature`.
+5. Abra um Pull Request.
+
+## 📜 Licença
+
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📧 Contato
+
+Caso tenha dúvidas ou sugestões, sinta-se à vontade para entrar em contato! ✉️
+
+Desenvolvido por **Paciência Isaac Manuel**. 🚀

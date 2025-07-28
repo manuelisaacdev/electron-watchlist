@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import { AnimatePresence } from "framer-motion";
 
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar/Sidebar";
@@ -9,8 +10,10 @@ export default function MainLayout() {
             <Sidebar />
             <div className="flex flex-col items-stretch grow h-full">
                 <Topbar />
-                <div className="w-full grow overflow-y-auto" style={{height: "calc(100vh - 64px)"}}>
-                    <Outlet />
+                <div className="w-full grow overflow-hidden" style={{height: "calc(100vh - 64px)"}}>
+                    <AnimatePresence>
+                        <Outlet />
+                    </AnimatePresence>
                 </div>
             </div>
         </main>

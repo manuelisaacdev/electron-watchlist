@@ -40,19 +40,15 @@ export default function Topbar() {
                 <p className="text-sm text-zinc-500 truncate">Nenhuma pessoa selecionada</p>
                 <span className="inline-block self-stretch border-l border-zinc-200"/>
                 <Tooltip>
-                    <TooltipTrigger>
-                        <IconButton component={"div"} className="text-lg text-blue-400">
-                            <LuInfo/>
-                        </IconButton>
+                    <TooltipTrigger className="flex shrink-0 justify-center items-center text-lg w-8 h-8 rounded-full text-blue-400 cursor-pointer hover:bg-black/5">
+                        <LuInfo/>
                     </TooltipTrigger>
                     <TooltipContent>Sobre</TooltipContent>
                 </Tooltip>
                 
                 <Tooltip>
-                    <TooltipTrigger>
-                        <IconButton component={"div"} className="text-lg">
-                            <LuBell/>
-                        </IconButton>
+                    <TooltipTrigger className="flex shrink-0 justify-center items-center text-lg w-8 h-8 rounded-full text-app-primary-400 cursor-pointer hover:bg-black/5">
+                        <LuBell/>
                     </TooltipTrigger>
                     <TooltipContent>Notificações</TooltipContent>
                 </Tooltip>

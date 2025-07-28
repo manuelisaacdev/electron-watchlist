@@ -7,32 +7,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
-let Person = class Person {
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToOne, JoinColumn, BaseEntity } from "typeorm";
+import Gender from "./Gender.js";
+import PreferredMedia from "./PreferredMedia.js";
+let Person = class Person extends BaseEntity {
 };
 __decorate([
     PrimaryGeneratedColumn("uuid"),
     __metadata("design:type", String)
 ], Person.prototype, "id", void 0);
 __decorate([
-    Column({
-        length: 100,
-        nullable: false,
-    }),
+    Column({ length: 100, nullable: false }),
     __metadata("design:type", String)
 ], Person.prototype, "name", void 0);
 __decorate([
-    Column({ length: 20 }),
+    Column({ length: 10, enum: Gender, nullable: false }),
     __metadata("design:type", String)
-], Person.prototype, "phone", void 0);
+], Person.prototype, "gender", void 0);
 __decorate([
-    CreateDateColumn({ nullable: false, update: false }),
+    CreateDateColumn({ name: "created_at", nullable: false, update: false }),
     __metadata("design:type", Date)
 ], Person.prototype, "createdAt", void 0);
 __decorate([
-    UpdateDateColumn({ nullable: false }),
+    UpdateDateColumn({ name: "update_at", nullable: false }),
     __metadata("design:type", Date)
 ], Person.prototype, "updateAt", void 0);
+__decorate([
+    OneToOne((type) => PreferredMedia),
+    JoinColumn({ name: "preferred_media_id", referencedColumnName: "id", foreignKeyConstraintName: "fk_persons_preferred_media" }),
+    __metadata("design:type", PreferredMedia)
+], Person.prototype, "preferredMedia", void 0);
 Person = __decorate([
     Entity({ name: 'persons' })
 ], Person);
